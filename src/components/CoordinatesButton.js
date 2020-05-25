@@ -6,6 +6,6 @@ export default class CoordinatesButton extends React.Component {
         const { onReceiveCoordinates } = this.props;
         const clickFunc = (e) => onReceiveCoordinates([e.clientX, e.clientY]);
         return (
-            <button onClick={(e) => clickFunc(e)}></button>)
+            <button onClick={clickFunc}></button>)
     }
 }
