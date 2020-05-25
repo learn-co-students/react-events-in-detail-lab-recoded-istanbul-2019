@@ -2,13 +2,19 @@
 import React, { Component } from "react";
 
 class CoordinatesButton extends Component {
+
+    handleClick = (e) => {
+        const arr = [e.clientX, e.clientY]
+
+        this.props.onReceiveCoordinates(arr)
+    }
     
-render() {
-    return (
-        <div>
-            <button></button>
-        </div>
-    )
+    render() {
+        return (
+            <div>
+                <button onClick={this.handleClick} >Mouse Coordinates</button>
+            </div>
+        )
 }
 
 }
