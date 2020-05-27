@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
 class CoordinatesButton extends Component {
-    getCoordinates  = (e) =>{
-        let coordinates = [e.clientX, e.clientY];
+    getCoordinates  = event =>{
+        let coordinates = [event.clientX, event.clientY];
         this.props.onReceiveCoordinates(coordinates);
       }
       render(){
